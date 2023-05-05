@@ -5,6 +5,7 @@ import Reset from "./Reset";
 import Dashboard from "./Dashboard";
 import Home from "./Home";
 import Checkout from "./Checkout";
+import History from "./History"
 import { Container } from "react-bootstrap"
 import Navbar from 'react-bootstrap/Navbar';
 
@@ -30,12 +31,13 @@ function App() {
         <div className="w-100" style={{ maxWidth: "400px" }}>
           <Router>
             <Routes>
-              <Route exact path="/" element={<Login />} />
-              <Route exact path="/register" element={<Register />} />
-              <Route exact path="/reset" element={<Reset />} />
-              <Route exact path="/dashboard" element={<Dashboard />} />
-              <Route exact path="/home" element={<Home />} />
-              <Route exact path="/checkout" element={<Checkout />} />
+              <Route exact path="/" element={<Login />}               />
+              <Route exact path="/register" element={<Register />}    />
+              <Route exact path="/reset" element={<Reset />}          />
+              <Route exact path="/dashboard" element={<Dashboard />}  />
+              <Route exact path="/home" element={<Home />}            />
+              <Route exact path="/checkout" element={<Checkout />}    />
+              <Route exact path="/history" element={<History />}      />
             </Routes>
           </Router>
         </div>

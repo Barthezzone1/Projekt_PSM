@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useLocation, useNavigate } from 'react-router-dom';
-import { db, collection} from './firebase'; 
+import { db, collection, addDoc } from './firebase'; 
 
 const Checkout = () => {
     const navigate = useNavigate();
@@ -16,8 +16,25 @@ const Checkout = () => {
     };
     
     const handleReturn = () => {
-        navigate("/home");
-    }
+        const itemsList = getItemsList(basket);
+        const totalAmount = getTotal(basket);
+        const order = {
+            items: itemsList,
+            total: totalAmount
+        };
+        const dbRef = collection(db, 'orders');
+        addDoc(dbRef, order)
+            .then(() => {
+                console.log('Order successfully added to Firestore!');
+                navigate("/home");
+            })
+            .catch((error) => {
+                console.error('Error adding order to Firestore: ', error);
+            });
+    };
+    
+      
+    
 
     const getItemsList = (basket) => {
         const itemsList = basket.map((item) => ({

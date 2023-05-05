@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { signOut } from "firebase/auth";
 import { auth, db, collection} from './firebase'; 
 import { useNavigate } from 'react-router-dom';
-import { BiLogOutCircle, BiCartAlt, BiCheckCircle } from "react-icons/bi";
+import { BiLogOutCircle, BiCartAlt, BiCheckCircle, BiInfoCircle } from "react-icons/bi";
 import Card from "./Card";
 import { getDocs } from 'firebase/firestore';
 
@@ -23,6 +23,10 @@ const Home = () => {
     }).catch((error) => {
       // An error happened.
     });
+  }
+
+  const handleHistory = () => {
+      navigate("/history")
   }
 
   const [productsList, setProductsList] = useState([]);
@@ -98,6 +102,9 @@ const Home = () => {
         </button>
         <button className="dashboard__btn" onClick={handleCheckout} style={{ position: "absolute", top: "10px", right: "100px", backgroundColor: "#0F0" }}>
           <BiCheckCircle /> Checkout
+        </button>
+        <button className="dashboard__btn" onClick={handleHistory} style={{ position: "absolute", top: "10px", right: "205px", backgroundColor: "#0FF" }}>
+          <BiInfoCircle /> History
         </button>
       </nav>
     </>
