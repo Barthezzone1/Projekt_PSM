@@ -97,6 +97,11 @@ const logout = () => {
     signOut(auth);
 };
 
+const getCurrentUserID = () => {
+    const user = auth.currentUser;
+    return user ? user.uid : null;
+};
+
 export {
     auth,
     db,
@@ -107,4 +112,5 @@ export {
     sendPasswordReset,
     logout,
     addDoc,
+    getCurrentUserID,
 };

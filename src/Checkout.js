@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useLocation, useNavigate } from 'react-router-dom';
 import { db, collection, addDoc } from './firebase'; 
-
+import {getCurrentUserID} from './firebase'
 const Checkout = () => {
     const navigate = useNavigate();
     const {state} = useLocation();
@@ -17,8 +17,10 @@ const Checkout = () => {
     
     const handleReturn = () => {
         const itemsList = getItemsList(basket);
+        const currentUserUID = getCurrentUserID();
         const totalAmount = getTotal(basket);
         const order = {
+            uid: currentUserUID,
             items: itemsList,
             total: totalAmount
         };
@@ -44,9 +46,9 @@ const Checkout = () => {
         return itemsList;
     };  
 
-    const itemsList = getItemsList(basket);
+    
     const [total, setTotal] = useState(0); // add state variable for total
-    var tarif = 0;
+    let tarif = 0;
 
     function applyDiscount(tarif) {
         if (tarif === 1) {

@@ -62,13 +62,12 @@ const Home = () => {
 
   return (
     <>
-      <nav>
-        <p id='polecane'>
-          Polecane Produkty
-        </p>
-        <div>
-          <button class="btn btn-primary" onClick={handleToggleBasket}>View Basket ({basket.length}) <BiCartAlt /></button>
-          <button class="btn btn-danger" onClick={handleClearBasket}>Clear Basket</button>
+      <nav style={{display:"flex", justifyContent:"center", alignItems:"center", flexDirection:"column"}}>
+        <h1> Polecane Produkty</h1>
+        
+        <div style={{marginBottom:"24px" }}>
+          <button class="btn btn-primary" onClick={handleToggleBasket}>Zobacz Koszyk ({basket.length}) <BiCartAlt /></button>
+          <button class="btn btn-danger" onClick={handleClearBasket}>Wyczyść Koszyk</button>
         </div>
 
         {isBasketVisible && (
@@ -99,14 +98,14 @@ const Home = () => {
             ))}
           </div>
         </div>
-        <button className="dashboard__btn" onClick={handleLogout} style={{ position: "absolute", top: "10px", right: "10px", backgroundColor: "#888" }}>
-          <BiLogOutCircle /> Logout
+        <button className="dashboard__btn" onClick={handleLogout} style={{ position: "absolute", top: "14px", right: "10px", backgroundColor: "#888" }}>
+          <BiLogOutCircle /> Wyloguj
         </button>
-        <button className="dashboard__btn" onClick={handleCheckout} style={{ position: "absolute", top: "10px", right: "100px", backgroundColor: "#0F0" }}>
-          <BiCheckCircle /> Checkout
+        <button className="dashboard__btn" onClick={handleCheckout} style={{ position: "absolute", top: "14px", right: "100px", backgroundColor: "#0F0" }}>
+          <BiCheckCircle /> Zapłać
         </button>
-        <button className="dashboard__btn" onClick={handleHistory} style={{ position: "absolute", top: "10px", right: "205px", backgroundColor: "#0FF" }}>
-          <BiInfoCircle /> History
+        <button className="dashboard__btn" onClick={handleHistory} style={{ position: "absolute", top: "14px", right: "180px", backgroundColor: "#0FF" }}>
+          <BiInfoCircle /> Historia
         </button>
       </nav>
     </>
