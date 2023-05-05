@@ -4,6 +4,7 @@ import Register from "./Register";
 import Reset from "./Reset";
 import Dashboard from "./Dashboard";
 import Home from "./Home";
+import Checkout from "./Checkout";
 import { Container } from "react-bootstrap"
 import Navbar from 'react-bootstrap/Navbar';
 
@@ -34,6 +35,7 @@ function App() {
             <Route exact path="/reset" element={<Reset />} />
             <Route exact path="/dashboard" element={<Dashboard />} />
             <Route exact path="/home" element={<Home/>}/>
+            <Route exact path="/checkout" element={<Checkout />}/>
           </Routes>
         </Router>
       </div>

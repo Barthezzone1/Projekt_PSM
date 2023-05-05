@@ -2,12 +2,18 @@ import React, { useState, useEffect } from 'react';
 import { signOut } from "firebase/auth";
 import { auth, db, collection} from './firebase'; 
 import { useNavigate } from 'react-router-dom';
-import { BiLogOutCircle, BiCartAlt } from "react-icons/bi";
+import { BiLogOutCircle, BiCartAlt, BiCheckCircle } from "react-icons/bi";
 import Card from "./Card";
 import { getDocs } from 'firebase/firestore';
 
 const Home = () => {
   const navigate = useNavigate();
+
+  const handleCheckout = () => {
+
+    navigate("/checkout", { state: { basket: basket }});
+    
+  }
 
   const handleLogout = () => {
     signOut(auth).then(() => {
@@ -32,6 +38,7 @@ const Home = () => {
       const productsCol = collection(db, 'products');
       const productSnapshot = await getDocs(productsCol);
       const productsList = productSnapshot.docs.map(doc => doc.data());
+      console.log(productsList);
       setProductsList(productsList);
     }
     fetchProducts();
@@ -88,6 +95,9 @@ const Home = () => {
         </div>
         <button className="dashboard__btn" onClick={handleLogout} style={{ position: "absolute", top: "10px", right: "10px", backgroundColor: "#888" }}>
           <BiLogOutCircle /> Logout
+        </button>
+        <button className="dashboard__btn" onClick={handleCheckout} style={{ position: "absolute", top: "10px", right: "100px", backgroundColor: "#0F0" }}>
+          <BiCheckCircle /> Checkout
         </button>
       </nav>
     </>
