@@ -3,6 +3,7 @@ import Login from "./Login";
 import Register from "./Register";
 import Reset from "./Reset";
 import Dashboard from "./Dashboard";
+import Home from "./Home";
 import { Container } from "react-bootstrap"
 import Navbar from 'react-bootstrap/Navbar';
 
@@ -12,7 +13,7 @@ function App() {
     <>
        <Navbar bg="dark" variant="dark" className="textcentre">
         <Container>
-          <Navbar.Brand href="/home">
+          <Navbar.Brand href="/Home">
             <img
               alt=""
               src="/icon.ico"
@@ -32,6 +33,7 @@ function App() {
             <Route exact path="/register" element={<Register />} />
             <Route exact path="/reset" element={<Reset />} />
             <Route exact path="/dashboard" element={<Dashboard />} />
+            <Route exact path="/home" element={<Home/>}/>
           </Routes>
         </Router>
       </div>

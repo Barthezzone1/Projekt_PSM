@@ -32,6 +32,13 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getFirestore(app);
 
+async function getProducts(db) {
+    const productsCol = collection(db, 'products');
+    const productsSnapshot = await getDocs(productsCol);
+    const productsList = productsSnapshot.docs.map(doc => doc.data());
+    return productsList;
+  }
+
 const googleProvider = new GoogleAuthProvider();
 
 const signInWithGoogle = async () => {
@@ -105,4 +112,5 @@ export {
     registerWithEmailAndPassword,
     sendPasswordReset,
     logout,
+    getProducts,
 };
