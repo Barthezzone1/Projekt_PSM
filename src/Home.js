@@ -96,17 +96,19 @@ const Home = () => {
             <p>Total: {calculateBasketTotal()}</p>
           </div>
         )}
-        
+
         <div className="container">
           <div className="row">
             {productsList.map((product, index) => (
-              <Card
-                key={index}
-                title={product.name}
-                images={product.images}
-                price={product.price}
-                onAddToBasket={() => handleAddToBasket(product)} // pass the handleAddToBasket function as a prop
-              />
+              <div style={{ marginBottom: "20px" }}>
+                <Card
+                  key={index}
+                  title={product.name}
+                  images={product.image}
+                  price={product.price}
+                  onAddToBasket={() => handleAddToBasket(product)}
+                />
+              </div>
             ))}
           </div>
         </div>
