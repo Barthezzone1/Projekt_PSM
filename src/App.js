@@ -3,6 +3,7 @@ import Login from "./Login";
 import Register from "./Register";
 import Reset from "./Reset";
 import Dashboard from "./Dashboard";
+import Home from "./Home";
 import { Container } from "react-bootstrap"
 import Navbar from 'react-bootstrap/Navbar';
 
@@ -10,9 +11,9 @@ import Navbar from 'react-bootstrap/Navbar';
 function App() {
   return (
     <>
-       <Navbar bg="dark" variant="dark" className="textcentre">
+      <Navbar bg="dark" variant="dark" className="textcentre">
         <Container>
-          <Navbar.Brand href="/home">
+          <Navbar.Brand href="/Home">
             <img
               alt=""
               src="/icon.ico"
@@ -25,19 +26,20 @@ function App() {
         </Container>
       </Navbar>
       <Container className="d-flex align-items-center justify-content-center" style={{ minHeight: "100vh" }}>
-      <div className="w-100" style={{ maxWidth: "400px" }}>
-        <Router>
-          <Routes>
-            <Route exact path="/" element={<Login />} />
-            <Route exact path="/register" element={<Register />} />
-            <Route exact path="/reset" element={<Reset />} />
-            <Route exact path="/dashboard" element={<Dashboard />} />
-          </Routes>
-        </Router>
-      </div>
-    </Container>
+        <div className="w-100" style={{ maxWidth: "400px" }}>
+          <Router>
+            <Routes>
+              <Route exact path="/" element={<Login />} />
+              <Route exact path="/register" element={<Register />} />
+              <Route exact path="/reset" element={<Reset />} />
+              <Route exact path="/dashboard" element={<Dashboard />} />
+              <Route exact path="/home" element={<Home />} />
+            </Routes>
+          </Router>
+        </div>
+      </Container>
     </>
-    
+
 
 
   );

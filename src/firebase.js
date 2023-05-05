@@ -20,13 +20,13 @@ import {
 } from "firebase/firestore";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyBy7R8baGD2Dua6oVolcEHIvDmru0S6sLs",
-    authDomain: "auth-proj-psm.firebaseapp.com",
-    projectId: "auth-proj-psm",
-    storageBucket: "auth-proj-psm.appspot.com",
-    messagingSenderId: "1074167730901",
-    appId: "1:1074167730901:web:3fd2e6f2dccfc9d224885c"
-};
+    apiKey: "AIzaSyBufEQvQ-Xb_c0A4btTFGZz1xyrFO900a0",
+    authDomain: "psm-projekt-barc.firebaseapp.com",
+    projectId: "psm-projekt-barc",
+    storageBucket: "psm-projekt-barc.appspot.com",
+    messagingSenderId: "213628435756",
+    appId: "1:213628435756:web:770134af6bcb9c56068089"
+  };
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
@@ -100,6 +100,7 @@ const logout = () => {
 export {
     auth,
     db,
+    collection,
     signInWithGoogle,
     logInWithEmailAndPassword,
     registerWithEmailAndPassword,
