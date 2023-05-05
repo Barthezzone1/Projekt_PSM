@@ -106,4 +106,5 @@ export {
     registerWithEmailAndPassword,
     sendPasswordReset,
     logout,
+    addDoc,
 };
