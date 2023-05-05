@@ -82,6 +82,7 @@ const Checkout = () => {
                                 <div className="card-body">
                                     <h5 className="card-title">{basket.name}</h5>
                                     <p className="card-text">{basket.price}</p>
+                                    
                                 </div>
                             </div>
                         </div>
