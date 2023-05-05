@@ -10,7 +10,7 @@ import Navbar from 'react-bootstrap/Navbar';
 function App() {
   return (
     <>
-       <Navbar bg="dark" variant="dark">
+       <Navbar bg="dark" variant="dark" className="textcentre">
         <Container>
           <Navbar.Brand href="/home">
             <img
