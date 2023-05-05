@@ -5,14 +5,16 @@ import { useNavigate } from 'react-router-dom';
 import { BiLogOutCircle, BiCartAlt, BiCheckCircle, BiInfoCircle } from "react-icons/bi";
 import Card from "./Card";
 import { getDocs } from 'firebase/firestore';
+import Click from "./audioclip/click.mp3"
+const pattern = [200, 100];
 
 const Home = () => {
   const navigate = useNavigate();
 
   const handleCheckout = () => {
-
+    playVibration()
     navigate("/checkout", { state: { basket: basket }});
-    
+    new Audio(Click).play();
   }
 
   const handleLogout = () => {
@@ -20,13 +22,17 @@ const Home = () => {
       // Sign-out successful.
       navigate("/");
       console.log("Signed out successfully")
+      playVibration()
     }).catch((error) => {
       // An error happened.
     });
+    new Audio(Click).play();
   }
 
   const handleHistory = () => {
       navigate("/history")
+      playVibration()
+      new Audio(Click).play();
   }
 
   const [productsList, setProductsList] = useState([]);
@@ -50,14 +56,21 @@ const Home = () => {
 
   const handleAddToBasket = (product) => {
     setBasket(prevBasket => [...prevBasket, product]);
+    new Audio(Click).play();
   }
 
   const handleClearBasket = () => {
     setBasket([]);
+    new Audio(Click).play();
   }
 
   const handleToggleBasket = () => {
     setIsBasketVisible(prevIsVisible => !prevIsVisible);
+    new Audio(Click).play();
+  }
+
+  const playVibration = () => {
+    navigator.vibrate(pattern)
   }
 
   return (
