@@ -28,4 +28,8 @@ export default function Card(props) {
       </div>
     </div>
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 412b17acbc322122a9acb37072d8cd47a59d385e
