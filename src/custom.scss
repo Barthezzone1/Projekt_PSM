@@ -4,23 +4,17 @@
     --bs-body-bg: #FFEE5C;
 }
 
-<<<<<<< HEAD
 
 
 
 
 .row {
-=======
-    
-
-  .row {
->>>>>>> 412b17acbc322122a9acb37072d8cd47a59d385e
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-pack: distribute;
-<<<<<<< HEAD
     justify-content: space-around;
+    
 }
 
 .wrapper {
@@ -33,6 +27,7 @@
     box-shadow: 0 0 20px 10px rgba(25, 25, 25, 0.1);
     -webkit-transition: ease all .3s;
     transition: ease all .3s;
+    
 }
 
 .wrapper:hover {
@@ -41,44 +36,15 @@
 }
 
 .color_bg {
-=======
-        justify-content: space-around;
-  }
-
-  .wrapper {
-    margin: 60px 10px 10px;
-    padding-top: 300px;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-    position: relative;
-    -webkit-box-shadow: 0 0 20px 10px rgba(25, 25, 25, 0.1);
-            box-shadow: 0 0 20px 10px rgba(25, 25, 25, 0.1);
-    -webkit-transition: ease all .3s;
-    transition: ease all .3s;
-  }
-  
-  .wrapper:hover {
-    -webkit-transform: translateY(-10px);
-            transform: translateY(-10px);
-  }
-  
-   .color_bg {
->>>>>>> 412b17acbc322122a9acb37072d8cd47a59d385e
     display: block;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 200px;
-<<<<<<< HEAD
 }
 
 .card_img {
-=======
-  }
-  
-  .card_img {
->>>>>>> 412b17acbc322122a9acb37072d8cd47a59d385e
     background-size: contain;
     background-position: center bottom;
     background-repeat: no-repeat;
@@ -88,7 +54,6 @@
     height: 300px;
     -webkit-transition: ease all .3s;
     transition: ease all .3s;
-<<<<<<< HEAD
 }
 
 .cardInfo {
@@ -101,27 +66,12 @@
 }
 
 .cardInfo h1 {
-=======
-  }
-  
-  .cardInfo {
-    display: block;
-    padding: 20px 10px 5px 10px;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-    font-family: 'Roboto';
-    color: #666;
-  }
-  
-  .cardInfo h1 {
->>>>>>> 412b17acbc322122a9acb37072d8cd47a59d385e
     font-size: 20px;
     text-transform: uppercase;
     text-align: center;
     font-weight: bold;
     line-height: 1.3;
     margin-bottom: 10px;
-<<<<<<< HEAD
 }
 
 .cardInfo p {
@@ -131,23 +81,11 @@
 }
 
 .action {
-=======
-  }
-  
-  .cardInfo p {
-    width: 100%;
-    font-size: 14px;
-    text-align: center;
-  }
-  
-  .action {
->>>>>>> 412b17acbc322122a9acb37072d8cd47a59d385e
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: justify;
-<<<<<<< HEAD
     -ms-flex-pack: justify;
     justify-content: space-between;
     -webkit-box-align: center;
@@ -160,25 +98,10 @@
 }
 
 .priceGroup {
-=======
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    padding: 15px;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-    margin-top: 15px;
-  }
-  
-  .priceGroup {
->>>>>>> 412b17acbc322122a9acb37072d8cd47a59d385e
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: start;
-<<<<<<< HEAD
     -ms-flex-pack: start;
     justify-content: flex-start;
     -webkit-box-align: start;
@@ -197,31 +120,10 @@
 }
 
 .cart {
-=======
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  
-  .priceGroup .price {
-    font-size: 18px;
-    color: #000;
-    text-align: left;
-  }
-  
-  .cart {
->>>>>>> 412b17acbc322122a9acb37072d8cd47a59d385e
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: start;
-<<<<<<< HEAD
     -ms-flex-pack: start;
     justify-content: flex-start;
     -webkit-box-align: start;
@@ -234,6 +136,7 @@
     position: relative;
     width: 35px;
     height: 35px;
+    
 }
 
 .cart svg,
@@ -244,25 +147,3 @@
     -webkit-transition-delay: .2s;
     transition-delay: .2s;
 }
-=======
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    position: relative;
-    width: 35px;
-    height: 35px;
-  }
-  
-  .cart svg, .cart path, .cart circle {
-    stroke: currentColor;
-    fill: transparent;
-    -webkit-transition-delay: .2s;
-            transition-delay: .2s;
-  }
->>>>>>> 412b17acbc322122a9acb37072d8cd47a59d385e

@@ -1,15 +1,18 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default function Card(props) {
   let CardName = `color_bg ${props.alt}`;
-  let bg_img = `url(${props.images})`;
+  let  image = `url(${props.images})`;
   let { title, price, onAddToBasket } = props;
 
   return (
     <div className="card">
       <div className="wrapper">
-        <div className={CardName}></div>
-        <div className="card_img" style={{ "backgroundImage": bg_img }}></div>
+        <Link to={`/${title}`}>
+          <div className={CardName}></div>
+          <div className="card_img" style={{ "backgroundImage": image }}></div>
+        </Link>
         <div className="cardInfo">
           <h1>{title}</h1>
           <div className="action">
@@ -28,8 +31,4 @@ export default function Card(props) {
       </div>
     </div>
   );
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 412b17acbc322122a9acb37072d8cd47a59d385e
